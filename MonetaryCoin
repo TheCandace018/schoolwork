@@ -1,0 +1,39 @@
+//Design and implement a class called MonetaryCoin  that is derived from the Coin  
+//class presented in Chapter 5. Store an integer in the MonetaryCoin  that represents 
+//its value and add a method that returns its value. Add a toString  method that appends 
+//a space followed by the coin's value to the Coin's  String representation.
+//Driver. Instead of creating a main driver class, include a main method in the MonetaryCoin  
+// class itself to exercise the class's behavior. Your method should create an array 
+// of 7 MonetaryCoin  objects with values 1,5,10,25,50,100,100 and then iterate through the array, 
+//flipping in each coin. The method should then iterate through the array again, invoking the getValue  
+//method and adding up the resulting values. The String representation of each coin should then be printed 
+//on a line by itself, followed by, on a line by itself, the sum of the values that was computed 
+//(preceded by the label "Total Value: ".
+
+public class MonetaryCoin extends Coin 
+{ private int value; 
+ public MonetaryCoin(int value) { 
+this.value = value; 
+} 
+public int getValue() 
+{ return value; } 
+public String toString() 
+{ return super.toString() + " " + value; } 
+public static void main(String [] args) 
+{ int sum = 0; 
+MonetaryCoin[] coin = { 
+new MonetaryCoin(1), 
+new MonetaryCoin(5), 
+new MonetaryCoin(10), 
+new MonetaryCoin(25), 
+new MonetaryCoin(50), 
+new MonetaryCoin(100), 
+new MonetaryCoin(100) 
+}; 
+for(int i = 0;i<coin.length;i++) 
+{ coin[i].flip(); } 
+for(int i = 0;i<coin.length;i++) 
+{ sum += coin[i].getValue(); 
+System.out.println(coin[i].toString()); } 
+System.out.println(); 
+System.out.println("Total Value: " + sum); } }
