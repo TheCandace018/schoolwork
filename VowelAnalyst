@@ -1,0 +1,69 @@
+//Design and implement an application that reads a string from the user, 
+//then determines and prints how many of each lowercase vowel (a, e, i, o, and u) 
+//appear in the entire string. Have a separate counter for each vowel. Also count 
+//and print the number of nonvowel characters.
+
+//SPECIFICATION OF PROMPTS, LABELS AND OUTPUT: Your code should use the prompt "enter string: ". 
+//After the input is read, there are six lines of output, each starting with a 
+//different label: "a: ", "e: ", "i: ", "o: ", "u: ", "other: " in that order. After each label is the required count.
+
+//For example: if "aardvark heebie jeebies" were read in, the output would be:
+//a: 3
+//e: 6
+//i: 2
+//o: 0
+//u: 0
+//other: 12
+
+//SPECIFICATION OF NAMES: Your application class should be called VowelAnalyst
+
+import java.util.Scanner;
+
+public class VowelAnalyst{
+
+public static void main (String[]args)
+
+{
+    String userString;
+    int a=0, e=0, i=0, o=0, u=0, other=0;
+    char vowels;
+
+    Scanner user = new Scanner(System.in);
+
+    System.out.printf("enter string: ");
+    userString = user.nextLine();
+
+    for (int count=0; count < userString.length(); count++)
+    {
+        vowels = userString.charAt(count);
+
+        switch (vowels)
+        {
+        case 'a':
+            a++;
+            break;
+        case 'e':
+            e++;
+            break;
+        case 'i':
+         i++;
+            break;
+        case 'o':
+            o++;
+            break;
+        case 'u':
+            u++;
+            break;
+        default:
+            other++;
+        }
+
+    }
+    System.out.println ("a: " + a);
+    System.out.println ("e: " + e);
+    System.out.println ("i: " + i);
+    System.out.println ("o: " + o);
+    System.out.println ("u: " + u);
+    System.out.println ("other: " + other);
+}
+}
