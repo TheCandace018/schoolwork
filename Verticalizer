@@ -1,0 +1,20 @@
+//Design and implement an application that reads a string
+// from the user and prints it one character per line.
+
+import java.util.Scanner;
+
+public class Verticalizer{
+   
+   public static void main (String [] args)
+   {
+	   System.out.printf("Enter string: ");
+     Scanner in = new Scanner(System.in);  
+     String word= in.next();
+     for (int i = 0; i < word.length(); i++){
+       char letter = word.charAt(i);
+		System.out.println(letter); 
+		
+     }
+   }
+
+  }
