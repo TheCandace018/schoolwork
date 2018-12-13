@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Driver {
+       class InvalidDocumentCodeException extends Exception{
+public InvalidDocumentCodeException(){
+	super ("This document has an invalid code.");
+}
+}
+
+public static void main (String[] args)
+throws InvalidDocumentCodeException{
+Scanner scan = new Scanner(System.in);
+String user;
+char U,C,P;
+
+System.out.print("Enter file name:");
+user = scan.nextLine();
+while (!user.equals("DONE")){
+if (user.charAt(0) == 'U' || user.charAt(0) == 'P' || user.charAt(0) == 'C'){
+       System.out.print("Enter file name:");  
+       user = scan.nextLine();
+}
+else{  
+    System.out.printf("This document has an invalid code.\n");
+    System.out.print("Enter file name:");
+    user = scan.nextLine();
+    
+}
+}
+}
+}
