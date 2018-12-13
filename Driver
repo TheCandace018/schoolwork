@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Driver {
+
+   class StringTooLongException extends Exception{
+public StringTooLongException(){
+	super ("Enter a string: This string is too long.");
+}
+}
+
+public static void main (String[] args)
+throws StringTooLongException{
+Scanner scan = new Scanner(System.in);
+String user;
+System.out.print("Enter a string:");
+user = scan.nextLine();
+while (!user.equals("DONE")){
+if (user.length()>35){
+       System.out.println("This string is too long.");
+       System.out.print("Enter a string:");
+}
+ else 
+    if (user.length()<35)
+  System.out.print("Enter a string:");
+ user = scan.nextLine();
+
+}
+}
+}
