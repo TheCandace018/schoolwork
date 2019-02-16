@@ -1,0 +1,84 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <array>
+#include <cctype>
+
+using namespace std;
+
+//C-string
+char userOpt[] = { '1','2','3','X','\0'};
+char menu[] = "1. Buy\n2. Sell\n3. Convert\nX. Exit";
+//user input
+char Input;
+
+
+
+
+//PromptforInput method, that executes the word associated with the number
+void promptForInput(char &Input, char userOpt[]) { 
+
+	cout << menu << endl;
+	cin >> Input;	
+		
+		
+		if (Input)
+		{
+			switch (Input)
+			{
+			case '1':
+				cout << "Buy" << endl;
+				promptForInput(Input, userOpt);
+				break;
+
+			case '2':
+				cout << "Sell" << endl;
+				promptForInput(Input, userOpt);
+				break;
+
+			case '3':
+				cout << "Convert" << endl;
+				promptForInput(Input, userOpt);
+				break;
+			case 'X'||'x':
+				return;
+			
+			
+			}
+		}
+		}
+		
+		
+	
+		
+
+	
+
+
+
+
+
+
+
+	int main() {
+	
+		
+		
+		
+
+		promptForInput(Input, userOpt);
+
+		while (false) {
+
+		cout << "Enter a valid answer \n" << endl;
+		promptForInput(Input, userOpt);
+		cin >> Input;
+
+		}
+
+
+		
+
+		return 0;
+
+	}
