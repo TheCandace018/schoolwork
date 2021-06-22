@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class NameLettersCounter {
+
+   // FIXME: Specify a Scanner as a method parameter
+   public static int getAndCountNameLetters() {
+
+      // FIXME: Use the Scanner parameter instead of creating one every time
+      Scanner scnr = new Scanner(System.in);
+      String name = "";
+
+      if (scnr.hasNext()) {
+         name = scnr.next();
+      }
+
+      return name.length();
+   }
+
+   public static void main(String[] args) {
+      int firstNameLetterCount;
+      int lastNameLetterCount;
+
+      // FIXME: Create a Scanner here
+
+      System.out.println("Enter a person's first and last names:");
+
+      // The first method call will read both first and last names
+      // FIXME: Pass the Scanner as an argument to both method calls
+      firstNameLetterCount = getAndCountNameLetters();
+      lastNameLetterCount = getAndCountNameLetters();
+
+      System.out.println("The first name has " + firstNameLetterCount + " letters.");
+      System.out.println("The last name has " + lastNameLetterCount + " letters.");
+   }
+}
