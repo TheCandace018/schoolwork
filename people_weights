@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class PeopleWeights
+{
+    public static void main(String args[])
+    {
+        Scanner scnr =new Scanner(System.in);
+        double weights[]=new double[5];
+        double totalWeight = 0, avg, max = 0;
+        int i;
+        for (i = 0; i < 5; i++)
+        {
+            System.out.println("Enter weight " + (i + 1) + ": ");
+            weights[i] = scnr .nextDouble();
+           
+        }
+        
+        System.out.print("\n" + "You entered: ");
+        for (i = 0; i < 5; i++)
+        {
+            System.out.print(weights[i] + " ");
+            totalWeight = totalWeight + weights[i];
+        }
+        System.out.println();
+        for (i = 0; i < 5; i++)
+        {
+            if(weights[i]>max)
+                max=weights[i];
+        }
+        System.out.print("");
+        avg = totalWeight / 5;
+        System.out.println("Total weight: " + totalWeight);
+        System.out.println("Average weight: " + avg);
+        System.out.println("Max weight: " + max);
+    }
+}
