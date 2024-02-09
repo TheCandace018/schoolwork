@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	int input; 
+	int serv;
+
+	cin >> input;
+
+	if (input < 99 && input > 0 ) { // Primary Highway
+
+		if (input % 2 == 0) {
+
+			cout << "I-" << input << " is primary, going east/west." << endl;
+
+		}
+		else {
+
+			cout << "I-" << input << " is primary, going north/south." << endl;
+		}
+
+
+		
+	}
+	else if (input < 999 && input > 100) { // Auxilary Highway
+		
+		serv = input % 100;
+
+		if (input % 100 == 0) {
+
+		cout << input << " is not a valid interstate highway number." << endl;
+
+
+		}
+
+		else if (input % 2 == 0) {
+
+
+			cout << "I-" << input << " is auxiliary, serving I-" << serv <<", going east/west." << endl;
+
+		}
+		
+		else {
+
+
+			cout << "I-" << input << " is auxiliary, serving I-" << serv << ", going north/south." << endl;
+		}
+
+	
+	}
+	
+	
+	
+	else { //No such highway output
+		
+
+
+		cout << input << " is not a valid interstate highway number." << endl;
+	}
+
+	/* Type your code here. */
+
+	return 0;
+}
