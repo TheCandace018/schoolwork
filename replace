@@ -1,0 +1,36 @@
+*/
+Given string stringVal on one line, integer startIndex on a second line, and integer choiceLen on a third line, replace choiceLen characters with "(removed)", starting at index startIndex.
+
+Ex: If the input is:
+
+Fuzzy bear
+3
+4
+
+then the output is:
+
+Fuz(removed)ear
+
+Note: Using a pre-defined string function, the solution can be just one line of code
+/*
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+   string stringVal;
+   int startIndex;
+   int choiceLen;
+
+   getline(cin, stringVal);
+   cin >> startIndex;
+   cin >> choiceLen;
+
+   stringVal = stringVal.replace(startIndex, choiceLen,"(removed)");
+
+   cout << stringVal << endl;
+   
+   return 0;
+}
