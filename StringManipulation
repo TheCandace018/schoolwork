@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+   string strVal;
+   string string2;
+   int selectionLen;
+
+   getline(cin, strVal);
+   getline(cin, string2);
+   cin >> selectionLen;
+
+   strVal.replace(0, selectionLen, string2); //
+
+   cout << strVal << endl;
+   
+   return 0;
+}
+
+/* Given string strVal on one line, string string2 on a second line, and integer selectionLen on a third line, replace the first selectionLen characters in strVal with the contents of string2.
+
+Ex: If the input is:
+
+Fuzzy bear
+Happ
+4
+
+then the output is:
+
+Happy bear */
