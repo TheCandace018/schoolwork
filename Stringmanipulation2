@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+   string stringValue;
+   int posBegin;
+   int desiredLen;
+
+   getline(cin, stringValue);
+   cin >> posBegin;
+   cin >> desiredLen;
+
+  if (posBegin + desiredLen > stringValue.length()) {
+        desiredLen = stringValue.length() - posBegin; // Adjust length if necessary
+    }
+
+    // Extract and print the substring 
+    cout << stringValue.substr(posBegin, desiredLen) << endl; 
+
+   return 0;
+}
+
+
+/*Given string stringValue on one line, integer posBegin on a second line, and integer desiredLen on a third line, output the substring of stringValue starting at position posBegin and with length desiredLen. End with a newline.
+
+Ex: If the input is:
+
+Fuzzy bear
+3
+4
+
+then the output is:
+
+zy b 
+*/
